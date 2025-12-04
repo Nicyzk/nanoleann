@@ -3,11 +3,10 @@ import pickle
 
 import numpy as np
 
-embedding_files="data/embeddings.pkl"
+embedding_files="data/embedding.npy"
 
 def retrieve_arrays(n: int) -> np.ndarray:
-    with open(embedding_files, 'rb') as pickle_file:   
-        emb = pickle.load(pickle_file)
+    emb = np.load(embedding_files, mmap_mode='r')
     return emb[n]
 
 def main():
