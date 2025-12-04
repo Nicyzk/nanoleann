@@ -22,3 +22,8 @@ dependencies = [
 
 [project.urls]
 "Homepage" = "https://github.com/Nicyzk/nanoleann.git"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nanoleann*"]
+exclude = ["data*", "tests*"]
